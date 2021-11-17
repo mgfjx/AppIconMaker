@@ -1,0 +1,22 @@
+[
+  {
+    "path" : "mipmap-hdpi",
+    "size" : "72x72",
+  },
+  {
+    "path" : "mipmap-mdpi",
+    "size" : "48x48",
+  },
+  {
+    "path" : "mipmap-xhdpi",
+    "size" : "96x96",
+  },
+  {
+    "path" : "mipmap-xxhdpi",
+    "size" : "144x144",
+  },
+  {
+    "path" : "mipmap-xxxhdpi",
+    "size" : "192x192",
+  }
+]

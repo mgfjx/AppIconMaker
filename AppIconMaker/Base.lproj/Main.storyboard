@@ -702,10 +702,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="AppIconMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="AppIconMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="409" height="600"/>
                         <subviews>
@@ -859,7 +859,7 @@
                     </view>
                     <connections>
                         <outlet property="exportBtn" destination="edc-K7-ISY" id="zDI-Ca-tBV"/>
-                        <outlet property="imageView" destination="s3g-iv-oXu" id="Es4-Pa-HHH"/>
+                        <outlet property="imageView" destination="s3g-iv-oXu" id="dHL-cD-cek"/>
                         <outlet property="pathControl" destination="xYg-gh-E72" id="lpq-yT-F3T"/>
                         <outlet property="popUpBtn" destination="07f-KD-c2c" id="4NF-5R-JUY"/>
                         <outlet property="slider" destination="MHr-dw-keb" id="xUe-g8-Fdu"/>

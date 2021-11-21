@@ -51,7 +51,7 @@
 		2D65EA0727397B1200075AAC /* watch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D65EA0627397B1200075AAC /* watch.json */; };
 		2DC366AA27429CFB00CA6CD7 /* NSColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC366A927429CFA00CA6CD7 /* NSColor+Helper.swift */; };
 		2DC869CA2736CD740037BB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869C92736CD740037BB1B /* AppDelegate.swift */; };
-		2DC869CC2736CD740037BB1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869CB2736CD740037BB1B /* ViewController.swift */; };
+		2DC869CC2736CD740037BB1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869CB2736CD740037BB1B /* MainViewController.swift */; };
 		2DC869CE2736CD780037BB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC869CD2736CD780037BB1B /* Assets.xcassets */; };
 		2DC869D12736CD780037BB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC869CF2736CD780037BB1B /* Main.storyboard */; };
 		2DC869DC2736CD790037BB1B /* AppIconMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869DB2736CD790037BB1B /* AppIconMakerTests.swift */; };
@@ -130,7 +130,7 @@
 		2DC366A927429CFA00CA6CD7 /* NSColor+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Helper.swift"; sourceTree = "<group>"; };
 		2DC869C62736CD740037BB1B /* AppIconMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppIconMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC869C92736CD740037BB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DC869CB2736CD740037BB1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DC869CB2736CD740037BB1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2DC869CD2736CD780037BB1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC869D02736CD780037BB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DC869D22736CD780037BB1B /* AppIconMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppIconMaker.entitlements; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 				2DC869F62736EFEA0037BB1B /* Config */,
 				2D5DB94E273835BA00D36B01 /* LoadingManager.swift */,
 				2DC869C92736CD740037BB1B /* AppDelegate.swift */,
-				2DC869CB2736CD740037BB1B /* ViewController.swift */,
+				2DC869CB2736CD740037BB1B /* MainViewController.swift */,
 				2D5DB9002737DF6400D36B01 /* AppleModel.swift */,
 				2DD6884B2740288900E2F0B3 /* AndroidModel.swift */,
 				2DC869F42736D4040037BB1B /* DragImageView.swift */,
@@ -575,7 +575,7 @@
 				2D5DB9322738333700D36B01 /* KRActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				2D5DB9482738333700D36B01 /* KRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				2D5DB9352738333700D36B01 /* KRActivityIndicatorShape.swift in Sources */,
-				2DC869CC2736CD740037BB1B /* ViewController.swift in Sources */,
+				2DC869CC2736CD740037BB1B /* MainViewController.swift in Sources */,
 				2D5DB9402738333700D36B01 /* KRActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				2D5DB9452738333700D36B01 /* KRActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				2D5DB9362738333700D36B01 /* KRActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,

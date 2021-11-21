@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  AppIconMaker
 //
 //  Created by mgfjx on 2021/11/6.
@@ -31,7 +31,7 @@ class XLPathControl: NSPathControl {
     }
 }
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
     
     @IBOutlet weak var popUpBtn: NSPopUpButton!
     @IBOutlet weak var imageView: DragImageView!

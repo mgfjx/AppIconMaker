@@ -149,6 +149,7 @@ class MainViewController: NSViewController {
                 print(complete ? "导出成功!" : "导出失败!")
                 NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
                 LoadingManager.hide(onView: self.view)
+                
             }
         } else {
             LoadingManager.show(onView: self.view)
@@ -158,6 +159,7 @@ class MainViewController: NSViewController {
                 LoadingManager.hide(onView: self.view)
             }
         }
+        self.showLoaclNotification()
     }
     
     @IBAction func saveFilesTo(_ sender: NSButton) {
@@ -293,5 +295,23 @@ class MainViewController: NSViewController {
         self.slider.intValue = 0
         self.sliderLabel.stringValue = String(format: "%.1f", self.slider.floatValue) + "%"
     }
+    
+    /// 发送本地通知
+    func showLoaclNotification() {
+        let notification = NSUserNotification.init()
+        notification.title = "导出成功!"
+        notification.informativeText = "导出路径为："
+        notification.deliveryDate = Date.init(timeIntervalSinceNow: 0)
+        NSUserNotificationCenter.default.delegate = self
+        NSUserNotificationCenter.default.scheduleNotification(notification)
+    }
+}
+
+extension MainViewController: NSUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
+    
 }
 

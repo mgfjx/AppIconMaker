@@ -71,9 +71,23 @@ class MainViewController: NSViewController {
             self.resetConfig()
         }
         
-//        self.hotKey.keyDownHandler = {
-//          print("Pressed at \(Date())")
-//        }
+        HotKeyManager.manager.keyHandler = { [weak self] in
+            self?.saveFilesTo(NSButton.init())
+        }
+        
+        MenuItemManager.manager.menuEvent = { [weak self] menuItem in
+            
+            switch menuItem.tag {
+            case 100:
+                self?.selectImageFromFinder()
+                break
+            case 101:
+                self?.saveFilesTo(nil)
+                break
+            default:
+                break
+            }
+        }
     }
     
     override var representedObject: Any? {
@@ -83,7 +97,7 @@ class MainViewController: NSViewController {
     }
     
     func configImageView() {
-        let tap = NSClickGestureRecognizer.init(target: self, action: #selector(openPathSelect))
+        let tap = NSClickGestureRecognizer.init(target: self, action: #selector(selectImageFromFinder))
         self.imageView.addGestureRecognizer(tap)
         self.imageView.backgroudColor = holderColor //设置为加载图片时的背景色
         self.imageView.imageDroped = { [weak self] image in
@@ -166,12 +180,12 @@ class MainViewController: NSViewController {
         self.showLoaclNotification()
     }
     
-    @IBAction func saveFilesTo(_ sender: NSButton) {
+    @IBAction func saveFilesTo(_ sender: NSButton?) {
         UserDefaults.standard.set(self.popUpBtn.indexOfSelectedItem, forKey: kDeviceSelectedKey)
         self.loadConfigData()
     }
     
-    @objc func openPathSelect() {
+    @objc func selectImageFromFinder() {
         let openPanel = NSOpenPanel.init()
         openPanel.allowsMultipleSelection = false;
         openPanel.canChooseDirectories = false

@@ -13,9 +13,11 @@ class HotKeyManager {
     //加载快捷键
     let hotKey = HotKey(key: .r, modifiers: [.command])
     
+    var keyHandler: () -> Void = {   }
+    
     private init() {
-        self.hotKey.keyDownHandler = {
-          print("Pressed at \(Date())")
+        self.hotKey.keyDownHandler = { [weak self] in
+            self?.keyHandler()
         }
     }
     

@@ -48,5 +48,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         HotKeyManager.manager.pause()
         return false
     }
+    
+    @IBAction func menuItemClicked(_ sender: NSMenuItem) {
+        MenuItemManager.manager.menuEvent(sender)
+    }
 }
 

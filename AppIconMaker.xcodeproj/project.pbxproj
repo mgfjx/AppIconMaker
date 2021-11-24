@@ -49,6 +49,7 @@
 		2D5DB94F273835BB00D36B01 /* LoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB94E273835BA00D36B01 /* LoadingManager.swift */; };
 		2D65EA0527396D3F00075AAC /* NSView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D65EA0427396D3F00075AAC /* NSView+Helper.swift */; };
 		2D65EA0727397B1200075AAC /* watch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D65EA0627397B1200075AAC /* watch.json */; };
+		2D6C95B8274EAAF900569A3E /* MenuItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C95B6274EAAF900569A3E /* MenuItemManager.swift */; };
 		2DC366AA27429CFB00CA6CD7 /* NSColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC366A927429CFA00CA6CD7 /* NSColor+Helper.swift */; };
 		2DC869CA2736CD740037BB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869C92736CD740037BB1B /* AppDelegate.swift */; };
 		2DC869CC2736CD740037BB1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869CB2736CD740037BB1B /* MainViewController.swift */; };
@@ -128,6 +129,7 @@
 		2D5DB94E273835BA00D36B01 /* LoadingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingManager.swift; sourceTree = "<group>"; };
 		2D65EA0427396D3F00075AAC /* NSView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Helper.swift"; sourceTree = "<group>"; };
 		2D65EA0627397B1200075AAC /* watch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watch.json; sourceTree = "<group>"; };
+		2D6C95B6274EAAF900569A3E /* MenuItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemManager.swift; sourceTree = "<group>"; };
 		2DC366A927429CFA00CA6CD7 /* NSColor+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Helper.swift"; sourceTree = "<group>"; };
 		2DC869C62736CD740037BB1B /* AppIconMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppIconMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC869C92736CD740037BB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				2D5DB9002737DF6400D36B01 /* AppleModel.swift */,
 				2DD6884B2740288900E2F0B3 /* AndroidModel.swift */,
 				2DEAEE46274E6AF6002AF3C5 /* HotKeyManager.swift */,
+				2D6C95B6274EAAF900569A3E /* MenuItemManager.swift */,
 				2DC869F42736D4040037BB1B /* DragImageView.swift */,
 				2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */,
 				2DC869CD2736CD780037BB1B /* Assets.xcassets */,
@@ -599,6 +602,7 @@
 				2D5DB9382738333700D36B01 /* KRActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				2DEAEE47274E6AF6002AF3C5 /* HotKeyManager.swift in Sources */,
 				2DC869F52736D4040037BB1B /* DragImageView.swift in Sources */,
+				2D6C95B8274EAAF900569A3E /* MenuItemManager.swift in Sources */,
 				2D5DB94F273835BB00D36B01 /* LoadingManager.swift in Sources */,
 				2D5DB9432738333700D36B01 /* KRActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				2D5DB93B2738333700D36B01 /* KRActivityIndicatorAnimationBallScaleRipple.swift in Sources */,

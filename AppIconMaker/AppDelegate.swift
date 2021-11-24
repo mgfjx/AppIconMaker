@@ -27,13 +27,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if !flag {
+            print("reopen")
+            HotKeyManager.manager.resume()
             sender.windows.first?.makeKeyAndOrderFront(nil)
             return true
         } else {
             return false
         }
     }
+    
+    func applicationDidBecomeActive(_ notification: Notification) {
+        HotKeyManager.manager.resume()
+    }
+    
+    func applicationDidResignActive(_ notification: Notification) {
+        HotKeyManager.manager.pause()
+    }
 
-
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        HotKeyManager.manager.pause()
+        return false
+    }
 }
 

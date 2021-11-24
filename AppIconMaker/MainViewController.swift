@@ -70,6 +70,10 @@ class MainViewController: NSViewController {
             self.imageView.backgroudColor = takedColor
             self.resetConfig()
         }
+        
+//        self.hotKey.keyDownHandler = {
+//          print("Pressed at \(Date())")
+//        }
     }
     
     override var representedObject: Any? {

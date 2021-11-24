@@ -61,6 +61,7 @@
 		2DC869FA2736F18D0037BB1B /* iOS.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DC869F92736F18C0037BB1B /* iOS.json */; };
 		2DD6884A273FFC3D00E2F0B3 /* android.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD68849273FFC3D00E2F0B3 /* android.json */; };
 		2DD6884C2740288900E2F0B3 /* AndroidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6884B2740288900E2F0B3 /* AndroidModel.swift */; };
+		2DEAEE47274E6AF6002AF3C5 /* HotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAEE46274E6AF6002AF3C5 /* HotKeyManager.swift */; };
 		3E75F2BD8A91D4D5C2E33D08 /* Pods_AppIconMaker_AppIconMakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B6AC4A8ECD4EA6BCF740DB /* Pods_AppIconMaker_AppIconMakerUITests.framework */; };
 		44A3E4099BBB0CB01BB0EF80 /* Pods_AppIconMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E56923A94905D3AB2A18FB6 /* Pods_AppIconMakerTests.framework */; };
 		A4D846D54D054D1A798AF723 /* Pods_AppIconMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6F13FECBD7C572B54B3DF9 /* Pods_AppIconMaker.framework */; };
@@ -143,6 +144,7 @@
 		2DC869F92736F18C0037BB1B /* iOS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iOS.json; sourceTree = "<group>"; };
 		2DD68849273FFC3D00E2F0B3 /* android.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = android.json; sourceTree = "<group>"; };
 		2DD6884B2740288900E2F0B3 /* AndroidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidModel.swift; sourceTree = "<group>"; };
+		2DEAEE46274E6AF6002AF3C5 /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyManager.swift; sourceTree = "<group>"; };
 		31B78D66F0EF9F147240DCE2 /* Pods-AppIconMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppIconMakerTests.release.xcconfig"; path = "Target Support Files/Pods-AppIconMakerTests/Pods-AppIconMakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		35D87D73620C32CD555CFB78 /* Pods-AppIconMaker-AppIconMakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppIconMaker-AppIconMakerUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppIconMaker-AppIconMakerUITests/Pods-AppIconMaker-AppIconMakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E56923A94905D3AB2A18FB6 /* Pods_AppIconMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppIconMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +283,7 @@
 				2DC869CB2736CD740037BB1B /* MainViewController.swift */,
 				2D5DB9002737DF6400D36B01 /* AppleModel.swift */,
 				2DD6884B2740288900E2F0B3 /* AndroidModel.swift */,
+				2DEAEE46274E6AF6002AF3C5 /* HotKeyManager.swift */,
 				2DC869F42736D4040037BB1B /* DragImageView.swift */,
 				2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */,
 				2DC869CD2736CD780037BB1B /* Assets.xcassets */,
@@ -594,6 +597,7 @@
 				2D5DB93C2738333700D36B01 /* KRActivityIndicatorAnimationBallBeat.swift in Sources */,
 				2D5DB9012737DF6400D36B01 /* AppleModel.swift in Sources */,
 				2D5DB9382738333700D36B01 /* KRActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				2DEAEE47274E6AF6002AF3C5 /* HotKeyManager.swift in Sources */,
 				2DC869F52736D4040037BB1B /* DragImageView.swift in Sources */,
 				2D5DB94F273835BB00D36B01 /* LoadingManager.swift in Sources */,
 				2D5DB9432738333700D36B01 /* KRActivityIndicatorAnimationBallClipRotate.swift in Sources */,

@@ -84,7 +84,7 @@ class MainViewController: NSViewController {
                 self?.selectExportPath(nil)
                 break
             case 103:
-                self?.popUpBtn.perform(self?.popUpBtn.action)
+                self?.popUpBtn.sendAction(on: NSEvent.EventTypeMask.keyDown)
                 break
             default:
                 break

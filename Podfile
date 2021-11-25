@@ -9,7 +9,7 @@ target 'AppIconMaker' do
 
   # Pods for AppIconMaker
   pod 'SnapKit', '~> 5.0.1'
-  pod 'HotKey', '~> 0.1.2'
+#  pod 'HotKey', '~> 0.1.2'
 
   target 'AppIconMakerTests' do
     inherit! :search_paths

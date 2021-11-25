@@ -71,10 +71,6 @@ class MainViewController: NSViewController {
             self.resetConfig()
         }
         
-        HotKeyManager.manager.keyHandler = { [weak self] in
-            self?.saveFilesTo(NSButton.init())
-        }
-        
         MenuItemManager.manager.menuEvent = { [weak self] menuItem in
             
             switch menuItem.tag {
@@ -83,6 +79,12 @@ class MainViewController: NSViewController {
                 break
             case 101:
                 self?.saveFilesTo(nil)
+                break
+            case 102:
+                self?.selectExportPath(nil)
+                break
+            case 103:
+                self?.popUpBtn.perform(self?.popUpBtn.action)
                 break
             default:
                 break
@@ -234,7 +236,7 @@ class MainViewController: NSViewController {
         
     }
     
-    @IBAction func selectExportPath(_ sender: NSPathControl) {
+    @IBAction func selectExportPath(_ sender: NSPathControl?) {
         let openPanel = NSOpenPanel.init()
         openPanel.allowsMultipleSelection = false;
         openPanel.canChooseDirectories = true
@@ -318,7 +320,7 @@ class MainViewController: NSViewController {
     func showLoaclNotification() {
         let notification = NSUserNotification.init()
         notification.title = "导出成功!"
-        notification.informativeText = "导出路径为："
+        notification.informativeText = "导出路径为：\(self.pathControl.url!.absoluteString)"
         notification.deliveryDate = Date.init(timeIntervalSinceNow: 0)
         NSUserNotificationCenter.default.delegate = self
         NSUserNotificationCenter.default.scheduleNotification(notification)

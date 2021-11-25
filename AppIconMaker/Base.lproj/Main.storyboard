@@ -89,6 +89,16 @@
                                                 <action selector="menuItemClicked:" target="Voe-Tx-rLC" id="LsY-KP-0rf"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Export Path" tag="102" keyEquivalent="p" id="T42-SZ-ifQ" userLabel="ExportPath">
+                                            <connections>
+                                                <action selector="menuItemClicked:" target="Voe-Tx-rLC" id="cmz-MD-uMD"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select Device" tag="103" keyEquivalent="d" id="nNh-z6-d8I" userLabel="SelectDevice">
+                                            <connections>
+                                                <action selector="menuItemClicked:" target="Voe-Tx-rLC" id="IqL-Cp-1I5"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="XcF-en-QQm"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>

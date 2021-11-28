@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1A08C327537FDA00D8AD6A /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08C227537FDA00D8AD6A /* FinderSync.swift */; };
+		2D1A08C827537FDA00D8AD6A /* RightKey.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2D1A08C027537FDA00D8AD6A /* RightKey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D1A08CE2753805C00D8AD6A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1A08CD2753805C00D8AD6A /* Media.xcassets */; };
+		2D1A08CF2753810900D8AD6A /* AppleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB9002737DF6400D36B01 /* AppleModel.swift */; };
+		2D1A08D12753825300D8AD6A /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08D02753825200D8AD6A /* Defines.swift */; };
+		2D1A08D22753826F00D8AD6A /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08D02753825200D8AD6A /* Defines.swift */; };
+		2D1A08D32753830B00D8AD6A /* NSImage+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */; };
+		2D1A08D42753839B00D8AD6A /* iOS.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DC869F92736F18C0037BB1B /* iOS.json */; };
+		2D1A08D52753839B00D8AD6A /* mac.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D5DB9022737F48000D36B01 /* mac.json */; };
+		2D1A08D62753839B00D8AD6A /* android.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD68849273FFC3D00E2F0B3 /* android.json */; };
+		2D1A08D72753839B00D8AD6A /* watch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D65EA0627397B1200075AAC /* watch.json */; };
+		2D1A08D82753899B00D8AD6A /* AndroidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6884B2740288900E2F0B3 /* AndroidModel.swift */; };
 		2D5DB8FF2737BE5200D36B01 /* NSImage+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */; };
 		2D5DB9012737DF6400D36B01 /* AppleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB9002737DF6400D36B01 /* AppleModel.swift */; };
 		2D5DB9032737F48000D36B01 /* mac.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D5DB9022737F48000D36B01 /* mac.json */; };
@@ -68,6 +80,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2D1A08C627537FDA00D8AD6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DC869BE2736CD740037BB1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D1A08BF27537FDA00D8AD6A;
+			remoteInfo = RightKey;
+		};
 		2DC869D82736CD790037BB1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DC869BE2736CD740037BB1B /* Project object */;
@@ -84,7 +103,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2D1A08C927537FDA00D8AD6A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2D1A08C827537FDA00D8AD6A /* RightKey.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2D1A08C027537FDA00D8AD6A /* RightKey.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RightKey.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D1A08C227537FDA00D8AD6A /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		2D1A08C427537FDA00D8AD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D1A08C527537FDA00D8AD6A /* RightKey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RightKey.entitlements; sourceTree = "<group>"; };
+		2D1A08CD2753805C00D8AD6A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		2D1A08D02753825200D8AD6A /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Add.swift"; sourceTree = "<group>"; };
 		2D5DB9002737DF6400D36B01 /* AppleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleModel.swift; sourceTree = "<group>"; };
 		2D5DB9022737F48000D36B01 /* mac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mac.json; sourceTree = "<group>"; };
@@ -157,6 +196,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D1A08BD27537FDA00D8AD6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DC869C32736CD740037BB1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +241,17 @@
 				31B78D66F0EF9F147240DCE2 /* Pods-AppIconMakerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2D1A08C127537FDA00D8AD6A /* RightKey */ = {
+			isa = PBXGroup;
+			children = (
+				2D1A08C227537FDA00D8AD6A /* FinderSync.swift */,
+				2D1A08C427537FDA00D8AD6A /* Info.plist */,
+				2D1A08C527537FDA00D8AD6A /* RightKey.entitlements */,
+				2D1A08CD2753805C00D8AD6A /* Media.xcassets */,
+			);
+			path = RightKey;
 			sourceTree = "<group>";
 		};
 		2D5DB9042738333600D36B01 /* KRActivityIndicatorView */ = {
@@ -256,6 +313,7 @@
 				2DC869C82736CD740037BB1B /* AppIconMaker */,
 				2DC869DA2736CD790037BB1B /* AppIconMakerTests */,
 				2DC869E42736CD790037BB1B /* AppIconMakerUITests */,
+				2D1A08C127537FDA00D8AD6A /* RightKey */,
 				2DC869C72736CD740037BB1B /* Products */,
 				051445BDF3D2EAC57D353125 /* Pods */,
 				5EF67AE20DCCED5C15F9BAD1 /* Frameworks */,
@@ -268,6 +326,7 @@
 				2DC869C62736CD740037BB1B /* AppIconMaker.app */,
 				2DC869D72736CD790037BB1B /* AppIconMakerTests.xctest */,
 				2DC869E12736CD790037BB1B /* AppIconMakerUITests.xctest */,
+				2D1A08C027537FDA00D8AD6A /* RightKey.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +340,7 @@
 				2D5DB94E273835BA00D36B01 /* LoadingManager.swift */,
 				2DC869C92736CD740037BB1B /* AppDelegate.swift */,
 				2DC869CB2736CD740037BB1B /* MainViewController.swift */,
+				2D1A08D02753825200D8AD6A /* Defines.swift */,
 				2D5DB9002737DF6400D36B01 /* AppleModel.swift */,
 				2DD6884B2740288900E2F0B3 /* AndroidModel.swift */,
 				2D6C95B6274EAAF900569A3E /* MenuItemManager.swift */,
@@ -334,6 +394,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2D1A08BF27537FDA00D8AD6A /* RightKey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D1A08CC27537FDA00D8AD6A /* Build configuration list for PBXNativeTarget "RightKey" */;
+			buildPhases = (
+				2D1A08BC27537FDA00D8AD6A /* Sources */,
+				2D1A08BD27537FDA00D8AD6A /* Frameworks */,
+				2D1A08BE27537FDA00D8AD6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RightKey;
+			productName = RightKey;
+			productReference = 2D1A08C027537FDA00D8AD6A /* RightKey.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2DC869C52736CD740037BB1B /* AppIconMaker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DC869EB2736CD790037BB1B /* Build configuration list for PBXNativeTarget "AppIconMaker" */;
@@ -343,10 +420,12 @@
 				2DC869C32736CD740037BB1B /* Frameworks */,
 				2DC869C42736CD740037BB1B /* Resources */,
 				4FF6F1C14D55A4B0269923C5 /* [CP] Embed Pods Frameworks */,
+				2D1A08C927537FDA00D8AD6A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2D1A08C727537FDA00D8AD6A /* PBXTargetDependency */,
 			);
 			name = AppIconMaker;
 			productName = AppIconHelper;
@@ -402,6 +481,9 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					2D1A08BF27537FDA00D8AD6A = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					2DC869C52736CD740037BB1B = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -431,11 +513,24 @@
 				2DC869C52736CD740037BB1B /* AppIconMaker */,
 				2DC869D62736CD790037BB1B /* AppIconMakerTests */,
 				2DC869E02736CD790037BB1B /* AppIconMakerUITests */,
+				2D1A08BF27537FDA00D8AD6A /* RightKey */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D1A08BE27537FDA00D8AD6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D1A08CE2753805C00D8AD6A /* Media.xcassets in Resources */,
+				2D1A08D62753839B00D8AD6A /* android.json in Resources */,
+				2D1A08D42753839B00D8AD6A /* iOS.json in Resources */,
+				2D1A08D72753839B00D8AD6A /* watch.json in Resources */,
+				2D1A08D52753839B00D8AD6A /* mac.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DC869C42736CD740037BB1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,12 +665,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D1A08BC27537FDA00D8AD6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D1A08D32753830B00D8AD6A /* NSImage+Add.swift in Sources */,
+				2D1A08CF2753810900D8AD6A /* AppleModel.swift in Sources */,
+				2D1A08C327537FDA00D8AD6A /* FinderSync.swift in Sources */,
+				2D1A08D82753899B00D8AD6A /* AndroidModel.swift in Sources */,
+				2D1A08D22753826F00D8AD6A /* Defines.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DC869C22736CD740037BB1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2D5DB8FF2737BE5200D36B01 /* NSImage+Add.swift in Sources */,
 				2D5DB9322738333700D36B01 /* KRActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				2D1A08D12753825300D8AD6A /* Defines.swift in Sources */,
 				2D5DB9482738333700D36B01 /* KRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				2D5DB9352738333700D36B01 /* KRActivityIndicatorShape.swift in Sources */,
 				2DC869CC2736CD740037BB1B /* MainViewController.swift in Sources */,
@@ -642,6 +750,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2D1A08C727537FDA00D8AD6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D1A08BF27537FDA00D8AD6A /* RightKey */;
+			targetProxy = 2D1A08C627537FDA00D8AD6A /* PBXContainerItemProxy */;
+		};
 		2DC869D92736CD790037BB1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2DC869C52736CD740037BB1B /* AppIconMaker */;
@@ -666,6 +779,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2D1A08CA27537FDA00D8AD6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RightKey/RightKey.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RightKey/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RightKey;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgfjx.AppIconMaker.RightKey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2D1A08CB27537FDA00D8AD6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RightKey/RightKey.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RightKey/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RightKey;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgfjx.AppIconMaker.RightKey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		2DC869E92736CD790037BB1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -785,6 +950,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9C02745196BD7DB40D0ECD8 /* Pods-AppIconMaker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppIconMaker/AppIconMaker.entitlements;
@@ -814,6 +980,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E64CAE437B463DE3E6580EA8 /* Pods-AppIconMaker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppIconMaker/AppIconMaker.entitlements;
@@ -938,6 +1105,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D1A08CC27537FDA00D8AD6A /* Build configuration list for PBXNativeTarget "RightKey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D1A08CA27537FDA00D8AD6A /* Debug */,
+				2D1A08CB27537FDA00D8AD6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2DC869C12736CD740037BB1B /* Build configuration list for PBXProject "AppIconMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

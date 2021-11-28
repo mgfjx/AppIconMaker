@@ -60,6 +60,20 @@ class AndroidModel {
     /// 导出Android图标到path
     static func exportIcon(type: AppIconType, image: NSImage, path: String, complete: @escaping (Bool) -> Void){
         DispatchQueue.global().async {
+            
+            if FileManager.default.fileExists(atPath: path) {
+                do {
+                    try FileManager.default.removeItem(atPath: path)
+                } catch {
+                    print("删除路径失败: \(error)")
+                }
+            }
+            do {
+                try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print("创建路径失败: \(error)")
+            }
+            
             let arr = self.loadConfig()
             if arr.isEmpty {
                 DispatchQueue.main.async {

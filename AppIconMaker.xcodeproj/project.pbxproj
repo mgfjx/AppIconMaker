@@ -10,17 +10,14 @@
 		2D1A08C327537FDA00D8AD6A /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08C227537FDA00D8AD6A /* FinderSync.swift */; };
 		2D1A08C827537FDA00D8AD6A /* RightKey.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2D1A08C027537FDA00D8AD6A /* RightKey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2D1A08CE2753805C00D8AD6A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1A08CD2753805C00D8AD6A /* Media.xcassets */; };
-		2D1A08CF2753810900D8AD6A /* AppleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB9002737DF6400D36B01 /* AppleModel.swift */; };
-		2D1A08D12753825300D8AD6A /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08D02753825200D8AD6A /* Defines.swift */; };
-		2D1A08D22753826F00D8AD6A /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08D02753825200D8AD6A /* Defines.swift */; };
 		2D1A08D32753830B00D8AD6A /* NSImage+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */; };
 		2D1A08D42753839B00D8AD6A /* iOS.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DC869F92736F18C0037BB1B /* iOS.json */; };
 		2D1A08D52753839B00D8AD6A /* mac.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D5DB9022737F48000D36B01 /* mac.json */; };
 		2D1A08D62753839B00D8AD6A /* android.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD68849273FFC3D00E2F0B3 /* android.json */; };
 		2D1A08D72753839B00D8AD6A /* watch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D65EA0627397B1200075AAC /* watch.json */; };
-		2D1A08D82753899B00D8AD6A /* AndroidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6884B2740288900E2F0B3 /* AndroidModel.swift */; };
+		2D1A08DA2753E93A00D8AD6A /* AppIconMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08D92753E93900D8AD6A /* AppIconMaker.swift */; };
+		2D1A08DB2753E9A200D8AD6A /* AppIconMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A08D92753E93900D8AD6A /* AppIconMaker.swift */; };
 		2D5DB8FF2737BE5200D36B01 /* NSImage+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */; };
-		2D5DB9012737DF6400D36B01 /* AppleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB9002737DF6400D36B01 /* AppleModel.swift */; };
 		2D5DB9032737F48000D36B01 /* mac.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D5DB9022737F48000D36B01 /* mac.json */; };
 		2D5DB92A2738333700D36B01 /* KRActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB9052738333600D36B01 /* KRActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
 		2D5DB92B2738333700D36B01 /* KRActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DB9062738333600D36B01 /* KRActivityIndicatorAnimationBallGridBeat.swift */; };
@@ -73,7 +70,6 @@
 		2DC869F52736D4040037BB1B /* DragImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC869F42736D4040037BB1B /* DragImageView.swift */; };
 		2DC869FA2736F18D0037BB1B /* iOS.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DC869F92736F18C0037BB1B /* iOS.json */; };
 		2DD6884A273FFC3D00E2F0B3 /* android.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD68849273FFC3D00E2F0B3 /* android.json */; };
-		2DD6884C2740288900E2F0B3 /* AndroidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6884B2740288900E2F0B3 /* AndroidModel.swift */; };
 		3E75F2BD8A91D4D5C2E33D08 /* Pods_AppIconMaker_AppIconMakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B6AC4A8ECD4EA6BCF740DB /* Pods_AppIconMaker_AppIconMakerUITests.framework */; };
 		44A3E4099BBB0CB01BB0EF80 /* Pods_AppIconMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E56923A94905D3AB2A18FB6 /* Pods_AppIconMakerTests.framework */; };
 		A4D846D54D054D1A798AF723 /* Pods_AppIconMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6F13FECBD7C572B54B3DF9 /* Pods_AppIconMaker.framework */; };
@@ -123,9 +119,8 @@
 		2D1A08C427537FDA00D8AD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1A08C527537FDA00D8AD6A /* RightKey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RightKey.entitlements; sourceTree = "<group>"; };
 		2D1A08CD2753805C00D8AD6A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		2D1A08D02753825200D8AD6A /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
+		2D1A08D92753E93900D8AD6A /* AppIconMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconMaker.swift; sourceTree = "<group>"; };
 		2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Add.swift"; sourceTree = "<group>"; };
-		2D5DB9002737DF6400D36B01 /* AppleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleModel.swift; sourceTree = "<group>"; };
 		2D5DB9022737F48000D36B01 /* mac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mac.json; sourceTree = "<group>"; };
 		2D5DB9052738333600D36B01 /* KRActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
 		2D5DB9062738333600D36B01 /* KRActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
@@ -183,7 +178,6 @@
 		2DC869F42736D4040037BB1B /* DragImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragImageView.swift; sourceTree = "<group>"; };
 		2DC869F92736F18C0037BB1B /* iOS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iOS.json; sourceTree = "<group>"; };
 		2DD68849273FFC3D00E2F0B3 /* android.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = android.json; sourceTree = "<group>"; };
-		2DD6884B2740288900E2F0B3 /* AndroidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidModel.swift; sourceTree = "<group>"; };
 		31B78D66F0EF9F147240DCE2 /* Pods-AppIconMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppIconMakerTests.release.xcconfig"; path = "Target Support Files/Pods-AppIconMakerTests/Pods-AppIconMakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		35D87D73620C32CD555CFB78 /* Pods-AppIconMaker-AppIconMakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppIconMaker-AppIconMakerUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppIconMaker-AppIconMakerUITests/Pods-AppIconMaker-AppIconMakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E56923A94905D3AB2A18FB6 /* Pods_AppIconMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppIconMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,9 +334,7 @@
 				2D5DB94E273835BA00D36B01 /* LoadingManager.swift */,
 				2DC869C92736CD740037BB1B /* AppDelegate.swift */,
 				2DC869CB2736CD740037BB1B /* MainViewController.swift */,
-				2D1A08D02753825200D8AD6A /* Defines.swift */,
-				2D5DB9002737DF6400D36B01 /* AppleModel.swift */,
-				2DD6884B2740288900E2F0B3 /* AndroidModel.swift */,
+				2D1A08D92753E93900D8AD6A /* AppIconMaker.swift */,
 				2D6C95B6274EAAF900569A3E /* MenuItemManager.swift */,
 				2DC869F42736D4040037BB1B /* DragImageView.swift */,
 				2D5DB8FE2737BE5200D36B01 /* NSImage+Add.swift */,
@@ -669,11 +661,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1A08DB2753E9A200D8AD6A /* AppIconMaker.swift in Sources */,
 				2D1A08D32753830B00D8AD6A /* NSImage+Add.swift in Sources */,
-				2D1A08CF2753810900D8AD6A /* AppleModel.swift in Sources */,
 				2D1A08C327537FDA00D8AD6A /* FinderSync.swift in Sources */,
-				2D1A08D82753899B00D8AD6A /* AndroidModel.swift in Sources */,
-				2D1A08D22753826F00D8AD6A /* Defines.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +673,6 @@
 			files = (
 				2D5DB8FF2737BE5200D36B01 /* NSImage+Add.swift in Sources */,
 				2D5DB9322738333700D36B01 /* KRActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
-				2D1A08D12753825300D8AD6A /* Defines.swift in Sources */,
 				2D5DB9482738333700D36B01 /* KRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				2D5DB9352738333700D36B01 /* KRActivityIndicatorShape.swift in Sources */,
 				2DC869CC2736CD740037BB1B /* MainViewController.swift in Sources */,
@@ -700,10 +689,10 @@
 				2D5DB9342738333700D36B01 /* KRActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				2D5DB9302738333700D36B01 /* KRActivityIndicatorAnimationBallRotate.swift in Sources */,
 				2D5DB94A2738333700D36B01 /* KRActivityIndicatorAnimationDelegate.swift in Sources */,
+				2D1A08DA2753E93A00D8AD6A /* AppIconMaker.swift in Sources */,
 				2D5DB9372738333700D36B01 /* KRActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				2D5DB9412738333700D36B01 /* KRActivityIndicatorAnimationBlank.swift in Sources */,
 				2D5DB93C2738333700D36B01 /* KRActivityIndicatorAnimationBallBeat.swift in Sources */,
-				2D5DB9012737DF6400D36B01 /* AppleModel.swift in Sources */,
 				2D5DB9382738333700D36B01 /* KRActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				2DC869F52736D4040037BB1B /* DragImageView.swift in Sources */,
 				2D6C95B8274EAAF900569A3E /* MenuItemManager.swift in Sources */,
@@ -711,7 +700,6 @@
 				2D5DB9432738333700D36B01 /* KRActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				2D5DB93B2738333700D36B01 /* KRActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				2D5DB93D2738333700D36B01 /* KRActivityIndicatorAnimationBallPulseRise.swift in Sources */,
-				2DD6884C2740288900E2F0B3 /* AndroidModel.swift in Sources */,
 				2DC869CA2736CD740037BB1B /* AppDelegate.swift in Sources */,
 				2D5DB9442738333700D36B01 /* KRActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				2D5DB9492738333700D36B01 /* KRActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,

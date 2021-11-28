@@ -146,7 +146,7 @@ class MainViewController: NSViewController {
         
         if type == .Android {
             LoadingManager.show(onView: self.view)
-            AndroidModel.exportIcon(type: type, image: image, path: path) { complete in
+            AppIconMaker.exportAndroidIcon(type: type, image: image, path: path) { complete in
                 print(complete ? "导出成功!" : "导出失败!")
                 NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
                 LoadingManager.hide(onView: self.view)
@@ -154,7 +154,7 @@ class MainViewController: NSViewController {
             }
         } else {
             LoadingManager.show(onView: self.view)
-            AppleModel.exportIcon(type: type, image: image, path: path) { complete in
+            AppIconMaker.exportIcon(type: type, image: image, path: path) { complete in
                 print(complete ? "导出成功!" : "导出失败!")
                 NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
                 LoadingManager.hide(onView: self.view)

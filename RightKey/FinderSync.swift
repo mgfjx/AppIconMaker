@@ -162,11 +162,11 @@ class FinderSync: FIFinderSync {
             type = .Android
         }
         if type == .Android {
-            AndroidModel.exportIcon(type: type, image: image!, path: path) { complete in
+            AppIconMaker.exportAndroidIcon(type: type, image: image!, path: path) { complete in
                 NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
             }
         } else {
-            AppleModel.exportIcon(type: type, image: image!, path: path) { complete in
+            AppIconMaker.exportIcon(type: type, image: image!, path: path) { complete in
                 NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
             }
         }

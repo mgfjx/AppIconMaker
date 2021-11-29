@@ -13,9 +13,12 @@ let kLastImagePathKey: String = "kLastImagePathKey"
 let kDeviceSelectedKey: String = "kDeviceSelectedKey"
 let lastImagePath: String = NSTemporaryDirectory() + "/lastImage.png"
 
+///未添加图片时的背景色
 let holderColor = NSColor.color(hexString: "#dddddd")
+///已添加图片时的背景色
 let takedColor = NSColor.clear
 
+///设置NSPathControl不自动根据内容拉伸
 class XLPathControl: NSPathControl {
     override var intrinsicContentSize: NSSize {
         get {
@@ -26,11 +29,20 @@ class XLPathControl: NSPathControl {
 
 class MainViewController: NSViewController {
     
+    /// 选择device按钮
     @IBOutlet weak var popUpBtn: NSPopUpButton!
+    
+    /// 图片应用
     @IBOutlet weak var imageView: DragImageView!
+    
+    /// 路径组件
     @IBOutlet weak var pathControl: NSPathControl!
+    
+    /// 圆角设置slider
     @IBOutlet weak var slider: NSSlider!
     @IBOutlet weak var sliderLabel: NSTextField!
+    
+    /// 导出按钮
     @IBOutlet weak var exportBtn: NSButton!
     
     var originImage: NSImage?
@@ -91,6 +103,7 @@ class MainViewController: NSViewController {
         }
     }
     
+    /// 配置图片应用
     func configImageView() {
         let tap = NSClickGestureRecognizer.init(target: self, action: #selector(selectImageFromFinder))
         self.imageView.addGestureRecognizer(tap)
@@ -127,7 +140,6 @@ class MainViewController: NSViewController {
             }
             return
         }
-//        let path = self.pathLabel.stringValue + "/AppIconMaker"
         let path = self.pathControl.url!.path + "/AppIconMaker"
         
         var type: AppIconType
@@ -168,6 +180,7 @@ class MainViewController: NSViewController {
         self.loadConfigData()
     }
     
+    /// 从Finder选择图片
     @objc func selectImageFromFinder() {
         let openPanel = NSOpenPanel.init()
         openPanel.allowsMultipleSelection = false;
@@ -217,6 +230,7 @@ class MainViewController: NSViewController {
         
     }
     
+    /// 选择导出路径
     @IBAction func selectExportPath(_ sender: NSPathControl?) {
         let openPanel = NSOpenPanel.init()
         openPanel.allowsMultipleSelection = false;
@@ -277,6 +291,7 @@ class MainViewController: NSViewController {
         
     }
     
+    /// 圆角变化
     @IBAction func sliderChanged(_ sender: NSSlider) {
         self.sliderLabel.stringValue = String(format: "%.1f", self.slider.floatValue) + "%"
         guard let image = self.originImage else {
@@ -292,6 +307,7 @@ class MainViewController: NSViewController {
         }
     }
     
+    /// 重置数据
     func resetConfig() {
         self.slider.intValue = 0
         self.sliderLabel.stringValue = String(format: "%.1f", self.slider.floatValue) + "%"

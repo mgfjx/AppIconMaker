@@ -317,7 +317,7 @@ class MainViewController: NSViewController {
     func showLoaclNotification() {
         let notification = NSUserNotification.init()
         notification.title = "导出成功!"
-        notification.informativeText = "导出路径为：\(self.pathControl.url!.absoluteString)"
+        notification.informativeText = "导出路径为：\(self.pathControl.url!.path)"
         notification.deliveryDate = Date.init(timeIntervalSinceNow: 0)
         NSUserNotificationCenter.default.delegate = self
         NSUserNotificationCenter.default.scheduleNotification(notification)

@@ -140,7 +140,7 @@ class MainViewController: NSViewController {
             }
             return
         }
-        let path = self.pathControl.url!.path + "/AppIconMaker"
+        let path = self.pathControl.url!.path
         
         var type: AppIconType
         switch self.popUpBtn.indexOfSelectedItem {
@@ -153,26 +153,16 @@ class MainViewController: NSViewController {
         case 3:
             type = .Android
         default:
-            type = .iOS
+            type = .All
         }
         
-        if type == .Android {
-            LoadingManager.show(onView: self.view)
-            AppIconMaker.exportAndroidIcon(type: type, image: image, path: path) { complete in
-                print(complete ? "导出成功!" : "导出失败!")
-                NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
-                LoadingManager.hide(onView: self.view)
-                
-            }
-        } else {
-            LoadingManager.show(onView: self.view)
-            AppIconMaker.exportIcon(type: type, image: image, path: path) { complete in
-                print(complete ? "导出成功!" : "导出失败!")
-                NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
-                LoadingManager.hide(onView: self.view)
-            }
+        LoadingManager.show(onView: self.view)
+        AppIconMaker.exportIcon(type: type, image: image, directory: path) { (complete, filePath) in
+            print(complete ? "导出成功!" : "导出失败!")
+            NSWorkspace.shared.open(URL.init(fileURLWithPath: filePath))
+            LoadingManager.hide(onView: self.view)
+            self.showLoaclNotification()
         }
-        self.showLoaclNotification()
     }
     
     @IBAction func saveFilesTo(_ sender: NSButton?) {

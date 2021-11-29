@@ -110,7 +110,7 @@ class FinderSync: FIFinderSync {
         let menuItem = NSMenuItem.init(title: "AppIconMaker", action: #selector(itemClicked(_:)), keyEquivalent: "")
         let subMenu = NSMenu(title: "AppIconMaker")
         do {
-            let titles = ["iPhone/iPad", "MacOS", "iWatch", "Android"]
+            let titles = ["iPhone/iPad", "MacOS", "iWatch", "Android", "All"]
             for i in 0..<titles.count {
                 let item = NSMenuItem.init(title: titles[i], action: #selector(itemClicked(_:)), keyEquivalent: "")
                 item.tag = i
@@ -149,7 +149,7 @@ class FinderSync: FIFinderSync {
             return
         }
         
-        let path = "\(target!.path)/AppIconMaker"
+        let path = target!.path
         var type: AppIconType = .iOS
         switch item.tag {
         case 0:
@@ -158,19 +158,14 @@ class FinderSync: FIFinderSync {
             type = .Mac
         case 2:
             type = .Watch
-        default:
+        case 3:
             type = .Android
+        default:
+            type = .All
         }
-        if type == .Android {
-            AppIconMaker.exportAndroidIcon(type: type, image: image!, path: path) { complete in
-                NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
-            }
-        } else {
-            AppIconMaker.exportIcon(type: type, image: image!, path: path) { complete in
-                NSWorkspace.shared.open(URL.init(fileURLWithPath: path))
-            }
+        AppIconMaker.exportIcon(type: type, image: image!, directory: path) { (complete, filePath) in
+            NSWorkspace.shared.open(URL.init(fileURLWithPath: filePath))
         }
-        
     }
 
 }

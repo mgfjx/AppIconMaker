@@ -246,7 +246,8 @@
                                                     <menuItem title="iPhone/iPad" state="on" id="gFx-BH-3kL"/>
                                                     <menuItem title="macOS" id="ncU-va-Mn6"/>
                                                     <menuItem title="iWatch" id="9jk-sh-733"/>
-                                                    <menuItem title="android" id="sgW-U5-yOF"/>
+                                                    <menuItem title="Android" id="sgW-U5-yOF"/>
+                                                    <menuItem title="All" id="tRX-ky-f1X"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>

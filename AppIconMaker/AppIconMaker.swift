@@ -14,6 +14,7 @@ enum AppIconType {
     case Mac
     case Watch
     case Android
+    case All
 }
 
 /// 苹果设备数据模型
@@ -43,6 +44,9 @@ class AppIconMaker {
             configName = "watch"
         case .Android:
             configName = "android"
+        case .All:
+            configName = "iOS"
+            break
         }
         let path = Bundle.main.path(forResource: configName, ofType: "json") ?? ""
         return path
@@ -54,8 +58,88 @@ class AppIconMaker {
     ///   - image: 原图片文件
     ///   - path: 导出地址
     ///   - complete: 导出回调
-    static func exportIcon(type: AppIconType, image: NSImage, path: String, complete: @escaping (Bool) -> Void){
+    static func exportIcon(type: AppIconType, image: NSImage, directory: String, complete: @escaping (Bool, String) -> Void) {
+        switch type {
+        case .iOS:
+            self.exportiOSIcon(type: type, image: image, directory: directory, complete: complete)
+        case .Mac:
+            self.exportiOSIcon(type: type, image: image, directory: directory, complete: complete)
+        case .Watch:
+            self.exportiOSIcon(type: type, image: image, directory: directory, complete: complete)
+        case .Android:
+            self.exportAndroidIcon(type: type, image: image, directory: directory, complete: complete)
+        case .All:
+            self.exportAllAppIcon(image: image, directory: directory, complete: complete)
+            break
+        }
+    }
+    
+    static func exportAllAppIcon(image: NSImage, directory: String, complete: @escaping (Bool, String) -> Void) {
+        
+        let group = Dispatch.DispatchGroup()
+        var filePath = directory
+        group.enter()
+        DispatchQueue.global().async(group: group, execute: DispatchWorkItem {
+            self.exportiOSIcon(type: .iOS, image: image, directory: directory) { success, path in
+                filePath = path
+                group.leave()
+            }
+        })
+        
+        group.enter()
+        DispatchQueue.global().async(group: group, execute: DispatchWorkItem {
+            self.exportiOSIcon(type: .Mac, image: image, directory: directory) { success, path in
+                filePath = path
+                group.leave()
+            }
+        })
+        
+        group.enter()
+        DispatchQueue.global().async(group: group, execute: DispatchWorkItem {
+            self.exportiOSIcon(type: .Watch, image: image, directory: directory) { success, path in
+                filePath = path
+                group.leave()
+            }
+        })
+        
+        group.enter()
+        DispatchQueue.global().async(group: group, execute: DispatchWorkItem {
+            self.exportAndroidIcon(type: .Android, image: image, directory: directory) { success, path in
+                filePath = path
+                group.leave()
+            }
+        })
+        
+        group.notify(queue: DispatchQueue.main) {
+            print("执行完了")
+            complete(true, filePath)
+        }
+        
+    }
+    
+    /// 导出iOS图标到path
+    /// - Parameters:
+    ///   - type: 类型
+    ///   - image: 原图片文件
+    ///   - path: 导出地址
+    ///   - complete: 导出回调
+    static func exportiOSIcon(type: AppIconType, image: NSImage, directory: String, complete: @escaping (Bool, String) -> Void){
         DispatchQueue.global().async {
+            
+            var path = directory + "/AppIconMaker"
+            switch type {
+            case .iOS:
+                path += "/iOS"
+                break
+            case .Mac:
+                path += "/Mac"
+                break
+            case .Watch:
+                path += "/iWatch"
+                break
+            default:
+                break
+            }
             
             if FileManager.default.fileExists(atPath: path) {
                 do {
@@ -73,7 +157,7 @@ class AppIconMaker {
             let arr = AppIconMaker.loadiOSConfig(type: type)
             if arr.isEmpty {
                 DispatchQueue.main.async {
-                    complete(false)
+                    complete(false, path)
                 }
                 return
             }
@@ -90,7 +174,7 @@ class AppIconMaker {
                 print("拷贝配置文件失败: \(error)")
             }
             DispatchQueue.main.async {
-                complete(true)
+                complete(true, path)
             }
         }
     }
@@ -124,7 +208,7 @@ class AppIconMaker {
         let idiom = item["idiom"] ?? ""
         let scale = item["scale"] ?? ""
         let size = item["size"] ?? ""
-        print("idiom: \(idiom), scale: \(scale), size: \(size), filename: \(filename)")
+//        print("idiom: \(idiom), scale: \(scale), size: \(size), filename: \(filename)")
         
         model.fileName = filename
         let scaleFloat: CGFloat = CGFloat((scale.dropLast() as NSString).floatValue)
@@ -168,7 +252,7 @@ extension AppIconMaker {
         var model = AndroidModel.init()
         let path = item["path"] ?? ""
         let size = item["size"] ?? ""
-        print("path: \(path), size: \(size)")
+//        print("path: \(path), size: \(size)")
         
         model.path = path
         let sizeArr = size.components(separatedBy: "x")
@@ -182,9 +266,10 @@ extension AppIconMaker {
     }
     
     /// 导出Android图标到path
-    static func exportAndroidIcon(type: AppIconType, image: NSImage, path: String, complete: @escaping (Bool) -> Void){
+    static func exportAndroidIcon(type: AppIconType, image: NSImage, directory: String, complete: @escaping (Bool, String) -> Void){
         DispatchQueue.global().async {
             
+            let path = directory + "/AppIconMaker/Android"
             if FileManager.default.fileExists(atPath: path) {
                 do {
                     try FileManager.default.removeItem(atPath: path)
@@ -201,7 +286,7 @@ extension AppIconMaker {
             let arr = self.loadConfig()
             if arr.isEmpty {
                 DispatchQueue.main.async {
-                    complete(false)
+                    complete(false, path)
                 }
                 return
             }
@@ -218,7 +303,7 @@ extension AppIconMaker {
                 
             }
             DispatchQueue.main.async {
-                complete(true)
+                complete(true, path)
             }
         }
     }

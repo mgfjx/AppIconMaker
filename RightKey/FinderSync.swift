@@ -173,8 +173,22 @@ class FinderSync: FIFinderSync {
 
     func openMainApp() {
         if #available(macOS 11.0, *) {
+            let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.mgfjx.AppIconMaker")!
+            let configuration = NSWorkspace.OpenConfiguration()
+            configuration.arguments = ["mgfjx", "fuck", "shit"]
+//            NSWorkspace.shared.openApplication(at: url, configuration: configuration, completionHandler: nil)
+//            NSWorkspace.shared.openApplication(at: url, configuration: configuration) { app, error in
+//                print("hehe")
+//            }
+            let pathUrl = URL.init(string: "/Users/mgfjx/Desktop/dektopfiles/DataSource/Image/0c294baef8bb6e6eb06f7199c9617675.jpeg")!
+            NSWorkspace.shared.openURLs([pathUrl], withApplicationAt: url, configuration: configuration)
+//            NSWorkspace.shared.openURLs([pathUrl], withApplicationAtURL: url, configuration: configuration) { app, error in
+//
+//            }
         } else {
-            NSWorkspace.shared.launchApplication("AppIconMaker")
+            let options = NSWorkspace.LaunchOptions()
+            NSWorkspace.shared.launchApplication(withBundleIdentifier: "com.mgfjx.AppIconMaker", options: options, additionalEventParamDescriptor: nil, launchIdentifier: nil)
+//            NSWorkspace.shared.openFile("/Users/mgfjx/Desktop/dektopfiles/DataSource/Image/0c294baef8bb6e6eb06f7199c9617675.jpeg", withApplication: url.path)
         }
     }
 }

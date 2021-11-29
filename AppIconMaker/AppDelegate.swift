@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -35,8 +36,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let arr = ProcessInfo.processInfo.arguments
+            let config = NSWorkspace.OpenConfiguration()
+            let str = filename
+            let alert = NSAlert()
+            alert.messageText = str
+            alert.beginSheetModal(for: NSApplication.shared.windows.first!) { response in
+            }
+        }
+        return true
+    }
+    
+    
     @IBAction func menuItemClicked(_ sender: NSMenuItem) {
         MenuItemManager.manager.menuEvent(sender)
     }
+    
 }
 

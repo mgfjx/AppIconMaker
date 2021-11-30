@@ -76,8 +76,8 @@ class MainViewController: NSViewController {
             self.resetConfig()
         }
         
+        //处理菜单menu事件
         MenuItemManager.manager.menuEvent = { [weak self] menuItem in
-            
             switch menuItem.tag {
             case 100:
                 self?.selectImageFromFinder()
@@ -94,6 +94,27 @@ class MainViewController: NSViewController {
             default:
                 break
             }
+        }
+        
+        //监听其他方式打开应用传值
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveImagePath(aNotification:)), name: Notification.Name("receiveImagePathkey"), object: nil)
+    }
+    
+    @objc func receiveImagePath(aNotification: NSNotification) {
+        let imagePath = (aNotification.object as! String)
+        let image = NSImage.init(contentsOfFile: imagePath)
+        self.imageView.image = image
+        self.showAlertByImage(image: image)
+        //如果图片存在则记录图片的路径
+        if image != nil {
+            //当前图片做本地保存
+            image!.saveToPath(path: lastImagePath)
+            self.originImage = image
+            UserDefaults.standard.set(URL.init(fileURLWithPath: imagePath), forKey: kLastImagePathKey)
+            self.imageView.backgroudColor = takedColor
+            self.resetConfig()
+        } else {
+            self.imageView.backgroudColor = holderColor
         }
     }
     

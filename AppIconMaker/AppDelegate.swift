@@ -36,19 +36,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let arr = ProcessInfo.processInfo.arguments
-            let config = NSWorkspace.OpenConfiguration()
-            let str = filename
-            let alert = NSAlert()
-            alert.messageText = str
-            alert.beginSheetModal(for: NSApplication.shared.windows.first!) { response in
-            }
+    func application(_ application: NSApplication, open urls: [URL]) {
+        let urlStr = urls.first!.absoluteString
+        let urlCode = urlStr.components(separatedBy: "//").last
+        if urlCode == nil {
+            return
         }
-        return true
+        let jsonString = urlCode!.removingPercentEncoding ?? ""
+        do {
+            let json: [String: String] = try JSONSerialization.jsonObject(with: jsonString.data(using: String.Encoding.utf8)!, options: JSONSerialization.ReadingOptions.fragmentsAllowed) as! [String : String]
+            let imagePath = json["imagePath"] ?? ""
+            NotificationCenter.default.post(name: NSNotification.Name("receiveImagePathkey"), object: imagePath)
+        } catch {
+            let errStr = error.localizedDescription
+            print(errStr)
+        }
     }
-    
     
     @IBAction func menuItemClicked(_ sender: NSMenuItem) {
         MenuItemManager.manager.menuEvent(sender)

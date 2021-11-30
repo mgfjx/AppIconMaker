@@ -114,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D08BFAB27560CA3002088F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2D1A08C027537FDA00D8AD6A /* RightKey.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RightKey.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1A08C227537FDA00D8AD6A /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		2D1A08C427537FDA00D8AD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -328,6 +329,7 @@
 		2DC869C82736CD740037BB1B /* AppIconMaker */ = {
 			isa = PBXGroup;
 			children = (
+				2D08BFAB27560CA3002088F2 /* Info.plist */,
 				2D5DB9042738333600D36B01 /* KRActivityIndicatorView */,
 				2D65EA0327396D2600075AAC /* Category */,
 				2DC869F62736EFEA0037BB1B /* Config */,
@@ -948,6 +950,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SELECTED_FILES = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppIconMaker/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -978,6 +981,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SELECTED_FILES = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppIconMaker/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

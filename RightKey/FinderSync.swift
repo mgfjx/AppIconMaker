@@ -110,12 +110,33 @@ class FinderSync: FIFinderSync {
         let menuItem = NSMenuItem.init(title: "AppIconMaker", action: #selector(itemClicked(_:)), keyEquivalent: "")
         let subMenu = NSMenu(title: "AppIconMaker")
         do {
-            let titles = ["iPhone/iPad", "MacOS", "iWatch", "Android", "All", "Edit..."]
+            let titles: [[(title: String, icon: String)]] = [
+                [
+                    ("iPhone/iPad", "sync_ios"),
+                    ("MacOS", "sync_mac"),
+                    ("iWatch", "sync_watch"),
+                    ("Android", "sync_android"),
+                    ("All", "sync_all"),
+                ],
+                [("Edit...", "sync_edit")]
+            ]
+            
             for i in 0..<titles.count {
-                let item = NSMenuItem.init(title: titles[i], action: #selector(itemClicked(_:)), keyEquivalent: "")
-                item.tag = i
-                subMenu.addItem(item)
+                let arr: [(title: String, icon: String)] = titles[i]
+                for j in 0..<arr.count {
+                    let model = arr[j]
+                    let item = NSMenuItem.init(title: model.title, action: #selector(itemClicked(_:)), keyEquivalent: "")
+                    item.image = NSImage.init(named: NSImage.Name(model.icon))
+                    item.tag = i
+                    subMenu.addItem(item)
+                }
+                if i != titles.count - 1 {
+                    let item = NSMenuItem.separator()
+                    item.title = "———————————"
+                    subMenu.addItem(item)
+                }
             }
+            
         }
         menu.addItem(menuItem)
         menuItem.submenu = subMenu

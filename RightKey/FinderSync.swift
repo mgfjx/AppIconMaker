@@ -127,7 +127,7 @@ class FinderSync: FIFinderSync {
                     let model = arr[j]
                     let item = NSMenuItem.init(title: model.title, action: #selector(itemClicked(_:)), keyEquivalent: "")
                     item.image = NSImage.init(named: NSImage.Name(model.icon))
-                    item.tag = i
+                    item.tag = i*10 + j
                     subMenu.addItem(item)
                 }
                 if i != titles.count - 1 {

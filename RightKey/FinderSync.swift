@@ -101,7 +101,7 @@ class FinderSync: FIFinderSync {
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         let url = items.first!
         let suffix = url.pathExtension
-        let images = ["png", "jpg", "jpeg"]
+        let images = ["png", "jpg", "jpeg", "icns", "webp"]
         if !images.contains(suffix.lowercased()) {
             return NSMenu.init()
         }

@@ -107,7 +107,8 @@ class FinderSync: FIFinderSync {
         }
         
         let menu = NSMenu(title: "AppIconMaker")
-        let menuItem = NSMenuItem.init(title: "AppIconMaker", action: #selector(itemClicked(_:)), keyEquivalent: "")
+        let menuItem = NSMenuItem.init()
+        menuItem.title = "AppIconMaker"
         let subMenu = NSMenu(title: "AppIconMaker")
         do {
             let titles: [[(title: String, icon: String)]] = [

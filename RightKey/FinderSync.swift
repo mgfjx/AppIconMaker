@@ -99,6 +99,9 @@ class FinderSync: FIFinderSync {
     func fileMenu() -> NSMenu {
         
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
+        if items.count != 1 {
+            return NSMenu.init()
+        }
         let url = items.first!
         let suffix = url.pathExtension
         let images = ["png", "jpg", "jpeg", "icns", "webp"]

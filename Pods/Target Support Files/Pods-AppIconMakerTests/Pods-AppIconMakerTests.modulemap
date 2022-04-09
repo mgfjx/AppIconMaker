@@ -1,0 +1,6 @@
+framework module Pods_AppIconMakerTests {
+  umbrella header "Pods-AppIconMakerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
